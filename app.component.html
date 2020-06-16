@@ -1,0 +1,42 @@
+<h3>Welcome {{name}}</h3>
+Name:<input type="text" [(ngModel)]="name" placeholder="Enter name" >
+
+<h4>Fill the current address:</h4><br>
+
+Street:<input type="text" [(ngModel)]="street" placeholder="Enter street" ><br>
+
+City:<input type="text" [(ngModel)]="city" placeholder="Enter city" ><br>
+Zip-code:<input type="text" [(ngModel)]="zip" placeholder="Enter zipcode" ><br>
+
+<input type="checkbox" >same as current address
+
+<h4>Fill the Permanent address:</h4><br>
+
+Street:<input type="text" value={{street}} placeholder="Enter street" ><br>
+City:<input type="text" value={{city}} placeholder="Enter city" ><br>
+Zip-code:<input type="text" value={{zip}} placeholder="Enter zipcode" ><br>
+
+
+<input type="button" value="submit">
+
+{{today}}
+
+<div >
+    <h3>counter:</h3><br>
+    <button (click)="decrement()">  -
+    </button> <span>{{count}}</span>
+    <button (click)="increment()">  +  
+    </button>
+
+ <div [ngClass]="count>10?'c1':'c2'">
+ {{count}}
+ </div>
+ </div>
+
+ <h3>Toggle content</h3><br>
+
+ <button (click) ="toggle()">{{status}}</button>
+ 
+ <div *ngIf="showMyContainer">
+     Hidden details 
+ </div>
